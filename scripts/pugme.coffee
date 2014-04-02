@@ -29,3 +29,8 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         msg.send "There are #{JSON.parse(body).pug_count} pugs."
 
+  robot.respond /airblade bomb( (\d+))?/i, (msg) ->
+    count = msg.match[2] || 5
+    url = "http://i.imgur.com/fJSOWyu.jpg"
+    for i in [0..count]
+      msg.send url
