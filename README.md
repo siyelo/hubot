@@ -198,3 +198,14 @@ hubot onto Windows][deploy-windows] wiki pages.
 
 You may want to get comfortable with `heroku logs` and `heroku restart` if
 you're having issues.
+
+## Keepalive Setup
+
+As per https://github.com/hubot-scripts/hubot-heroku-keepalive
+
+      heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s | grep web-url | cut -d= -f2)
+
+Wake up the bot at 3am UTC (approx 10am in Saigon!)
+
+      heroku config:set HUBOT_HEROKU_WAKEUP_TIME=3:00
+      heroku config:set HUBOT_HEROKU_SLEEP_TIME=21:00
