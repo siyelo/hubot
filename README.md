@@ -156,6 +156,7 @@ Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 [hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
 
 ### Setup
+
     % git remote add production https://git.heroku.com/hubot-siyelo.git
 
 ## Deployment
